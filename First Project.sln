@@ -1,31 +1,26 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32112.339
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "First Project", "First Project\First Project.vcxproj", "{83116C0B-F12F-432C-AB60-C1D3C8009E0A}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Debug|x64.ActiveCfg = Debug|x64
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Debug|x64.Build.0 = Debug|x64
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Debug|x86.ActiveCfg = Debug|Win32
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Debug|x86.Build.0 = Debug|Win32
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Release|x64.ActiveCfg = Release|x64
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Release|x64.Build.0 = Release|x64
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Release|x86.ActiveCfg = Release|Win32
-		{83116C0B-F12F-432C-AB60-C1D3C8009E0A}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C28517D4-80CA-40B8-B074-A51A1FAEF4D6}
-	EndGlobalSection
-EndGlobal
+#include <stdio.h> //Подключение библиотеки ввода/вывода
+#include <string.h>
+#include <math.h> //Подключение библиотеки математических функций
+#include <locale.h>
+//Точка входа в программу - главная функция
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int a, b;
+    float S, P;
+//Вычисляем площадь и периметр прямоугольника
+    printf ("Вычисление площади и периметра прямоугольника S = a*b и P=2*(a+b)\n");
+    printf ("Введите значение стороны a: ");
+    scanf ("%d", &a);
+    printf ("Введите значение стороны b: ");
+    scanf ("%d", &b);
+   
+    S = a*b;
+    P = 2*(a+b);
+//Вывод результатов
+   // printf("Корни уравнения x1 = %10.3f, x2 = %10.3f", x1, x2);
+ 
+    printf("Значение площади прямоугольника %6.2f\n",S);
+    printf("Значение периметра прямоугольника %6.2f",P);
+ 
+    return 0;
+}
