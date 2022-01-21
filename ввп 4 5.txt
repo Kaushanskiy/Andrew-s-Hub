@@ -1,0 +1,31 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода 
+#include <string.h> 
+#include <math.h> //Подключение библиотеки математических функций 
+#include <locale.h> 
+//Точка входа в программу - главная функция 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int a, b, modua, modub;
+    float sum1, raz1, pr1, ch1;
+    //Вычисляем сумму, разность, произведение и частное квадратов двух чисел
+    printf("Вычисление сумму, разность, произведение и частное модулей 2 чисел\n");
+    printf("Введите значение a: ");
+    scanf_s("%d", &a);
+    printf("Введите значение b: ");
+    scanf_s("%d", &b);
+    modua = abs(a);
+    modub = abs(b);
+    sum1 = modua + modub;
+    raz1 = modua - modub;
+    pr1 = modua * modub;
+    ch1 = modua / modub;
+    //Вывод результатов 
+
+    printf("Значение суммы модулей 2 чисел %6.2f\n", sum1);
+    printf("Значение разности модулей 2 чисел %6.2f\n", raz1);
+    printf("Значение произведения модулей 2 чисел %6.2f\n", pr1);
+    printf("Значение частного модулей 2 чисел %6.2f\n", ch1);
+
+    return 0;
+
+}
