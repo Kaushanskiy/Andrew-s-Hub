@@ -1,0 +1,28 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода 
+#include <string.h> 
+#include <math.h> //Подключение библиотеки математических функций 
+#include <locale.h> 
+//Точка входа в программу - главная функция 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int a, b, c, ac, bc, acbc;
+
+    //Вычисляем длины отрезков AC и BC и их произведение 
+    printf("Вычисление длины отрезков AC и BC и их произведения \n");
+    printf("Введите координаты A: ");
+    scanf_s("%d", &a);
+    printf("Введите координаты B: ");
+    scanf_s("%d", &b);
+    printf("Введите координаты C: ");
+    scanf_s("%d", &c);
+    if (a < c) { ac = c - a; }
+    else { ac = a - c; }
+    if (b < c) { bc = c - b; }
+    else { bc = b - c; }
+    acbc = ac * bc;
+    //Вывод результатов 
+
+    printf("Длины отрезков AC и BC и их произведение %d\t %d\t %d\n ", ac, bc, acbc);
+
+    return 0;
+}
