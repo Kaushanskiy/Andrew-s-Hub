@@ -1,0 +1,26 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода  
+#include <string.h>  
+#include <math.h> //Подключение библиотеки математических функций  
+#include <locale.h>  
+//Точка входа в программу - главная функция  
+int main() {  
+    setlocale(LC_ALL, "Russian");  
+    int A, B, C, bufer;  
+ 
+//Меняем местами значения A, B, C
+ 
+    printf ("Значения A, B, C\n");  
+    scanf ("%d" "%d" "%d", &A, &B, &C);  
+      
+    bufer = A;
+    A = B;
+    B = C;
+    C = bufer;
+//Вывод результатов  
+    printf("Поменяли местами\n");  
+    printf("Теперь А равно %d\n",A);  
+    printf("Теперь B равно %d\n",B);  
+    printf("Теперь C равно %d\n",C);  
+    return 0;  
+ 
+}
