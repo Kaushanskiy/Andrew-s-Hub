@@ -3,26 +3,26 @@
 #include <math.h> //Подключение библиотеки математических функций 
 #include <locale.h> 
 //Точка входа в программу - главная функция 
-int main() {
-    setlocale(LC_ALL, "Russian");
+int main() { 
+    setlocale(LC_ALL, "Russian"); 
     int a, b, c, ac, bc, acbc;
-
-    //Вычисляем длины отрезков AC и BC и их сумму. 
-    printf("Вычисление длины отрезков AC и BC и их суммы \n");
-    printf("Введите координаты A: ");
-    scanf_s("%d", &a);
-    printf("Введите координаты B: ");
-    scanf_s("%d", &b);
-    printf("Введите координаты C: ");
-    scanf_s("%d", &c);
-    if (a < c) { ac = c - a; }
-    else { ac = a - c; }
-    if (b < c) { bc = c - b; }
-    else { bc = b - c; }
+    
+//Вычисляем длины отрезков AC и BC и их сумму. 
+    printf ("Вычисление длины отрезков AC и BC и их суммы \n"); 
+    printf ("Введите координаты A: "); 
+    scanf("%d", &a);
+    printf ("Введите координаты B: "); 
+    scanf("%d", &b);
+    printf ("Введите координаты C: "); 
+    scanf("%d", &c);
+    if(a < c){ ac = c - a;}
+    else{ ac = a - c;} 
+    if(b < c){ bc = c - b;}
+    else{ bc = b - c;} 
     acbc = ac + bc;
-    //Вывод результатов 
-
-    printf("Длины отрезков AC и BC и их суммы %d\t %d\t %d\n ", ac, bc, acbc);
-
-    return 0;
+//Вывод результатов 
+ 
+    printf("Длины отрезков AC и BC и их суммы %d\t %d\t %d\n ",ac,bc,acbc); 
+ 
+    return 0; 
 }
