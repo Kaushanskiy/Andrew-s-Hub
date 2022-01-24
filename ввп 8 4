@@ -1,0 +1,21 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода   
+#include <string.h>   
+#include <math.h> //Подключение библиотеки математических функций   
+#include <locale.h>   
+//Точка входа в программу - главная функция   
+int main() {   
+    setlocale(LC_ALL, "Russian");
+    int number, obrat;
+//Дано двузначное число. Вывести число, полученное при
+//перестановке цифр исходного числа. 
+    printf ("Введите двухзначное число  ");   
+    scanf ("%d/t", &number); 
+    if ((number > 9) && (number < 100)){
+        obrat = (number % 10) * 10 + number/10;
+        
+//Вывод результатов   
+    printf("Число, обратное данному   %d\n", obrat);}
+    else{printf("Число не двухзначное");}
+    
+        return 0;   
+}
