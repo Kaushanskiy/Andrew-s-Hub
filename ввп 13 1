@@ -1,0 +1,24 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода   
+#include <string.h>   
+#include <math.h> //Подключение библиотеки математических функций   
+#include <locale.h>   
+//Точка входа в программу - главная функция   
+int main() {   
+    setlocale(LC_ALL, "Russian");
+
+//Дано вещественное число — цена 1 кг конфет. 
+//Вывести стоимость 0.1, 0.2, . . . , 1 кг конфет.
+  
+	float price, ii;
+	printf("Цена за 1 кг конфет: ") ;
+	scanf("%f", &price);
+	
+	
+	float cost = 0;
+	for(int i = 1; i <= 10; i++) {
+	    ii = i*0.1;
+		cost += price;
+		printf("Цена за %4.1f кг конфет: %6.3f\n", ii, cost) ;
+		}
+	return 0;
+}
