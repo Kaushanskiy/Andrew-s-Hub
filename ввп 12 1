@@ -1,0 +1,125 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода   
+#include <string.h>   
+#include <math.h> //Подключение библиотеки математических функций   
+#include <locale.h>   
+//Точка входа в программу - главная функция   
+int main() {   
+    setlocale(LC_ALL, "Russian");
+
+//Дан номер дня – целое число от 1 до 31 и месяца — целое число
+//в диапазоне 1–12 (1 — январь, 2 — февраль и т. д.). Вывести дату 
+//в виде текста (например, «пятое января»).
+   int month;
+   int chislo;
+   printf("Число:") ;
+   scanf ("%i", &chislo);
+   printf("Месяц:") ;
+   scanf ("%i", &month);
+   
+   if ((chislo/10 == 2) && (chislo>20)){printf("Двадцать  ") ;}
+   if ((chislo/10 == 3) && (chislo>30)){printf("Тридцать  ") ;}
+  
+   switch (chislo%10) {
+   
+   case 1: 
+       printf("первое  ") ;
+       break;
+   case 2: 
+       printf("второе  ") ;
+       break;
+   case 3: 
+       printf("третье  ") ;
+       break;
+   case 4: 
+       printf("четвёртое  ") ;
+       break;
+   case 5: 
+       printf("пятое  ") ;
+       break;
+   case 6: 
+       printf("шестое  ") ;
+       break;
+   case 7: 
+       printf("седьмое  ") ;
+       break;
+   case 8: 
+       printf("восьмое  ") ;
+       break;
+   case 9: 
+       printf("девятое  ") ;
+       break;
+   case 10: 
+       printf("Десятое  ") ;
+       break;
+   case 11: 
+       printf("Одиннадцатое  ") ;
+       break;
+   case 12: 
+       printf("Двенадцатое  ") ;
+       break;
+   case 13: 
+       printf("Тринадцатое  ") ;
+       break;
+   case 14: 
+       printf("Четырнадцатое  ") ;
+       break;
+   case 15: 
+       printf("Пятнадцатое  ") ;
+       break;
+   case 16: 
+       printf("Шестнадцатое  ") ;
+       break;
+   case 17: 
+       printf("Семнадцатое  ") ;
+       break;
+   case 18: 
+       printf("Восемнадцатое  ") ;
+       break;
+   case 19: 
+       printf("Девятнадцатое  ") ;
+       break;
+   case 20: 
+       printf("Двадцатое ") ;
+       break;
+   }  
+   switch (month) {
+   
+   case 1: 
+       printf("января\n") ;
+       break;
+   case 2:
+       printf("февраля\n") ;
+       break;
+   case 3:
+       printf("марта\n") ;
+       break;
+   case 4:
+       printf("апреля\n") ;
+       break;
+   case 5:
+       printf("мая\n") ;
+       break;
+   case 6:
+       printf("июня\n") ;
+       break;
+   case 7:
+       printf("июля\n") ;
+       break;
+   case 8:
+       printf("августа\n") ;
+       break;
+   case 9:
+       printf("сентября\n") ;
+       break;
+   case 10:
+       printf("октября\n") ;
+       break;
+   case 11:
+       printf("ноября\n") ;
+       break;
+   case 12:
+       printf("декабря\n") ;
+       break;
+   }
+   return 0;
+}
