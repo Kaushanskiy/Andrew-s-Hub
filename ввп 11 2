@@ -1,0 +1,26 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода   
+#include <string.h>   
+#include <math.h> //Подключение библиотеки математических функций   
+#include <locale.h>   
+//Точка входа в программу - главная функция   
+int main() {   
+    setlocale(LC_ALL, "Russian");
+    int A, B, C, min, sum, sum1;
+//Даны три числа. Найти сумму двух наибольших из них
+    min = 9999999;
+    printf ("Введите две переменные A ,B и C \n");   
+    scanf ("%d/t", &A);
+    scanf ("%d/t", &B);
+    scanf ("%d/t", &C);
+    
+    if ((A < B) && (A < C)){ min = A;}
+    if ((B<C) && (B<A)){min = B;}
+    if ((C<B) && (C<A)){min=C;};
+    printf("Минимум %d\n", min);
+    sum = A + B + C; 
+    printf("Сумма %d\n", sum);
+               //Вывод результатов  
+    sum1 = sum - min;
+    printf("Сумма двух наибольших значений %d \n",sum1);  
+    return 0;
+}
