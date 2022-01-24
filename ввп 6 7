@@ -1,0 +1,25 @@
+#include <stdio.h> //Подключение библиотеки ввода/вывода   
+#include <string.h>   
+#include <math.h> //Подключение библиотеки математических функций   
+#include <locale.h>   
+//Точка входа в программу - главная функция   
+int main() {   
+    setlocale(LC_ALL, "Russian");   
+     
+    float A, help1, help2, y;
+ 
+//Вычислить значение A**15
+    printf ("Введите значение A\n");   
+    scanf ("%f", &A);   
+    
+    help1 = pow(A,2);
+    help2 = pow(A,5);
+   
+    y = help1*help1*help1*help1*help1*help2;
+//Вывод результатов   
+    printf("Значение A**15 \n");   
+    printf("%7.3f\n",y);   
+ 
+    return 0;   
+ 
+}
